@@ -201,14 +201,17 @@ class _LessonSelectionScreenState extends State<LessonSelectionScreen> {
             label: 'Lessons',
           ),
           BottomNavigationBarItem(
+              backgroundColor: Colors.lime,
             icon: Icon(Icons.star),
             label: 'Achievements',
           ),
           BottomNavigationBarItem(
+              backgroundColor: Colors.lime,
             icon: Icon(Icons.forum),
             label: 'Community Forum',
           ),
           BottomNavigationBarItem(
+              backgroundColor: Colors.lime,
             icon: Icon(Icons.account_circle),
             label: 'Account',
           ),

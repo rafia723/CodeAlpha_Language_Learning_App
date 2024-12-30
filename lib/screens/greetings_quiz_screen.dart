@@ -86,7 +86,7 @@ class _GreetingsQuizScreenState extends State<GreetingsQuizScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.grey,
+        backgroundColor: Colors.limeAccent,
         title: const Text('Greetings Quiz',style: TextStyle(fontWeight: FontWeight.bold),),
       ),
       body: Padding(
@@ -106,7 +106,7 @@ class _GreetingsQuizScreenState extends State<GreetingsQuizScreen> {
             const SizedBox(height: 20),
             ...questions[currentQuestionIndex]['options'].map<Widget>((option) {
               return  ElevatedButton(
-                style: const ButtonStyle(backgroundColor: MaterialStatePropertyAll(Colors.amberAccent),
+                style: const ButtonStyle(backgroundColor: MaterialStatePropertyAll(Colors.limeAccent),
                 foregroundColor: MaterialStatePropertyAll(Colors.black)  ),
                 onPressed: () => checkAnswer(option),
                 child: Text(option),

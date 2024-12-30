@@ -71,6 +71,7 @@ class _NumbersCountingQuizScreenState extends State<NumbersCountingQuizScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.limeAccent,
         title: const Text('Numbers and Counting Quiz'),
       ),
       body: Padding(
@@ -85,8 +86,9 @@ class _NumbersCountingQuizScreenState extends State<NumbersCountingQuizScreen> {
             const SizedBox(height: 20),
             ...questions[currentQuestionIndex]['options'].map((option) {
               return ElevatedButton(
+                  style: ButtonStyle(backgroundColor: MaterialStatePropertyAll(Colors.limeAccent)),
                 onPressed: () => checkAnswer(option),
-                child: Text(option),
+                child: Text(option,style: TextStyle(color: Colors.black),),
               );
             }).toList(),
           ],

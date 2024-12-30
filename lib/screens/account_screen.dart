@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lang_app/screens/edit_account_screen.dart';
+import 'package:lang_app/screens/login.dart';
 
 class AccountScreen extends StatefulWidget {
   final String initialUsername;
@@ -114,11 +115,17 @@ class _AccountScreenState extends State<AccountScreen> {
 
             ElevatedButton(
               onPressed: () {
-                // Handle log out action (e.g., sign out the user)
+                Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => InitialScreen(), // Or the screen you want to navigate to
+              ),
+            );
               },
               child: const Text('Log Out'),
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.red, // Button color
+                foregroundColor: Colors.black,
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(12),
                 ),

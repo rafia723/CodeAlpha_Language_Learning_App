@@ -102,6 +102,7 @@ class _CommonPhrasesQuizScreenState extends State<CommonPhrasesQuizScreen> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Common Phrases Quiz'),
+        backgroundColor: Colors.limeAccent,
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -120,8 +121,9 @@ class _CommonPhrasesQuizScreenState extends State<CommonPhrasesQuizScreen> {
             const SizedBox(height: 20),
             ...questions[currentQuestionIndex]['options'].map<Widget>((option) {
               return ElevatedButton(
+                style: ButtonStyle(backgroundColor: MaterialStatePropertyAll(Colors.limeAccent)),
                 onPressed: () => checkAnswer(option),
-                child: Text(option),
+                child: Text(option,style: TextStyle(color: Colors.black),),
               );
             }).toList(),
           ],
